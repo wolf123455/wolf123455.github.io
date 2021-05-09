@@ -480,16 +480,23 @@
 <ul>
 <li>打开CMD命令行：</li>
 </ul>
-<figure class="highlight plaintext"><figcaption><span>config --global user.name "Github用户名"</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email &quot;Github注册邮箱&quot;</span><br><span class="line">ssh-keygen -t rsa -C &quot;Github注册邮箱&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;Github用户名&quot; </span><br><span class="line">git config --global user.email &quot;Github注册邮箱&quot;</span><br><span class="line">ssh-keygen -t rsa -C &quot;Github注册邮箱&quot;</span><br></pre></td></tr></table></figure>
+
+
+
 
 <ul>
 <li><p>**打开”.ssh”目录下的“id_rsa.pub”,全选复制。</p>
 <p>去Github网站添加密钥（粘贴刚才复制的内容）。**</p>
 <p>更改网站配置文件的如下部分：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">   type: git</span><br><span class="line">   repo: 仓库地址.git</span><br></pre></td></tr></table></figure></li>
+</li>
 </ul>
+<blockquote>
+<p>deploy:    type: git    repo: 仓库地址.git</p>
+</blockquote>
 <p><em>CMD命令行进入本地网站主目录：</em></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
 
 <p>3、<strong>上传网站</strong></p>
 <ul>
