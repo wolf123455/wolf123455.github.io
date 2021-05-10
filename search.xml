@@ -5,8 +5,8 @@
     
     <entry>
       <title>github+hexo简明安装教程</title>
-      <link href="posts/36778.html"/>
-      <url>posts/36778.html</url>
+      <link href="2021/05/09/github-hexo%E7%AE%80%E6%98%8E%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
+      <url>2021/05/09/github-hexo%E7%AE%80%E6%98%8E%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</url>
       
         <content type="html"><![CDATA[<p>一、<strong>本地部署</strong><br>git <a href="https://git-scm.com/">https://git-scm.com</a><br>node.js <a href="https://nodejs.org/en/">https://nodejs.org/en/</a><br>官方下载并一路默认安装<br>打开CMD命令行</p><pre><code>npm install -g hexo-clihexo init d:\my blog\hexod:cd blog\hexohexo s</code></pre><p><strong># 命令详情参考官方文档：</strong><br><a href="https://hexo.io/zh-cn/docs/commands.html">https://hexo.io/zh-cn/docs/commands.html</a></p><p><strong>正常的话，此时已可以通过浏览器访问“localhost:4000”打开本地搭建的网页了<br>（hexo s 这个窗口不能关闭）</strong></p><p>小技巧：</p><pre><code>hexo g -w</code></pre><pre><code>hexo s -s</code></pre><p>同时运行这2条命令，可实现本地网站内容更改后的实时更新。</p><p><strong>二、发布至Github</strong></p><p>1、注册Github</p><p>2、相关配置</p><ul><li>打开CMD命令行：</li></ul><pre><code> git config --global user.name "Github用户名"  git config --global user.email "Github注册邮箱" ssh-keygen -t rsa -C "Github注册邮箱"</code></pre><ul><li><p>**打开”.ssh”目录下的“id_rsa.pub”,全选复制。</p><p>去Github网站添加密钥（粘贴刚才复制的内容）。**</p><p>更改网站配置文件的如下部分：</p></li></ul><blockquote><p>deploy:    type: git    repo: 仓库地址.git</p></blockquote><p><em>CMD命令行进入本地网站主目录：</em></p><pre><code>npm install hexo-deployer-git --save</code></pre><p>3、<strong>上传网站</strong></p><ul><li> CMD进入本地网站主目录：</li></ul><pre><code> hexo clean hexo g hexo d</code></pre><p><em>至此一切顺利的话，访问Github域名即可看到生成的网站了。</em></p>]]></content>
       
@@ -18,8 +18,8 @@
     
     <entry>
       <title>Hello World</title>
-      <link href="posts/16107.html"/>
-      <url>posts/16107.html</url>
+      <link href="2021/05/09/hello-world/"/>
+      <url>2021/05/09/hello-world/</url>
       
         <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
       
