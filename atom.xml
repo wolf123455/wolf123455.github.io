@@ -6,7 +6,7 @@
   <link href="https://wolf123455.github.io/atom.xml" rel="self"/>
   
   <link href="https://wolf123455.github.io/"/>
-  <updated>2021-05-22T12:29:50.839Z</updated>
+  <updated>2021-05-22T16:06:17.173Z</updated>
   <id>https://wolf123455.github.io/</id>
   
   <author>
@@ -15,6 +15,19 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo静态博客视频播放</title>
+    <link href="https://wolf123455.github.io/posts/10212.html"/>
+    <id>https://wolf123455.github.io/posts/10212.html</id>
+    <published>2021-05-22T15:51:01.000Z</published>
+    <updated>2021-05-22T16:06:17.173Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>hexo matery主题博客解析bug问题及主题优化</title>
