@@ -316,7 +316,7 @@
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = '';
+        let pwd = '123456';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
@@ -480,14 +480,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    699
+                    780
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    2 Min
+                    3 Min
                 </div>
                 
 
@@ -525,7 +525,7 @@
 </blockquote>
 <p>** 但是MarkDown没有被标准化，其版本较多。**</p>
 <p>除了一些通用的标记如标题，样式，列表等，每个平台都有自己特殊的标记<br>比如Hexo通过hexo-tag-dplayer插件来实现播放视频：<br>GitHub：<a target="_blank" rel="noopener" href="https://github.com/MoePlayer/hexo-tag-dplayer" title="https://github.com/MoePlayer/hexo-tag-dplayer">https://github.com/MoePlayer/hexo-tag-dplayer</a><br>安装插件npm install hexo-tag-dplayer –save后<br>使用如下代码调用：</p>
-<pre class=" language-{% dplayer " url="https://moeplayer.b0.upaiyun.com/dplayer/hikarunara.mp4&quot;" "addition="https://dplayer.daoapp.io/bilibili?aid=4157142&quot;" "api="https://api.prprpr.me/dplayer/&quot;" "pic="https://moeplayer.b0.upaiyun.com/dplayer/hikarunara.jpg&quot;" "id="9E2E3368B56CDBB4&quot;" "loop="yes&quot;" "theme="#FADFA3&quot;" "autoplay="false&quot;" "token="tokendemo&quot;" %&#125;"=""><code class="language-{% dplayer " url="https://moeplayer.b0.upaiyun.com/dplayer/hikarunara.mp4&quot;" "addition="https://dplayer.daoapp.io/bilibili?aid=4157142&quot;" "api="https://api.prprpr.me/dplayer/&quot;" "pic="https://moeplayer.b0.upaiyun.com/dplayer/hikarunara.jpg&quot;" "id="9E2E3368B56CDBB4&quot;" "loop="yes&quot;" "theme="#FADFA3&quot;" "autoplay="false&quot;" "token="tokendemo&quot;" %&#125;"="">
+<pre><code>    {% dplayer "url=https://moeplayer.b0.upaiyun.com/dplayer/hikarunara.mp4" "addition=https://dplayer.daoapp.io/bilibili?aid=4157142" "api=https://api.prprpr.me/dplayer/" "pic=https://moeplayer.b0.upaiyun.com/dplayer/hikarunara.jpg" "id=9E2E3368B56CDBB4" "loop=yes" "theme=#FADFA3" "autoplay=false" "token=tokendemo" %}
 </code></pre>
 <p>这种方式虽然使用方便，但这样可移植性就非常差了，如果要把博客转移到其他平台非常不方便。</p>
 <h2 id="那么有没有其他办法呢？"><a href="#那么有没有其他办法呢？" class="headerlink" title="那么有没有其他办法呢？"></a>那么有没有其他办法呢？</h2><p>我们知道.md文件是通过渲染生成HTML文件后再放上网页的，也就是说直接在md文件中写的HTML可以原样放上网页</p>
@@ -543,8 +543,9 @@
 <li><a target="_blank" rel="noopener" href="https://web-1253780623.cos.ap-shanghai.myqcloud.com/zhf-blog/js/gotoplayer.js" title="我的CDN加速地址">我的CDN加速地址</a></li>
 </ul>
 <p>使用方法<br>首先调用两个JS</p>
-<pre class=" language-<script"><code class="language-<script"><div class="videosamplex">
-<script type="text/javascript" src="/js/gotoplayer.js"> </script>
+<pre><code>    &lt;script type="text/javascript" src="/js/ckplayer.js"&gt;&lt;/script&gt;  
+    &lt;div class="videosamplex"&gt;
+    &lt;script type="text/javascript" src="/js/             gotoplayer.js"&gt; &lt;/script&gt;
 </code></pre>
 <p>或使用我的CDN调用两个JS</p>
 <pre><code>&lt;script type="text/javascript" src="https://web-1253780623.cos.ap-shanghai.myqcloud.com/zhf-blog/js/ckplayer.js"&gt;&lt;/script&gt;  
@@ -554,19 +555,20 @@
 <p>** 注意：如果你不打算用我的CDN，那么请把两个文件放在博客目录下的source\js文件夹中 **<br><img src="https://img-blog.csdnimg.cn/img_convert/2573f9b7216fec1e2f8d067d69108b62.png"></p>
 <p>并且确保在执行hexo g 后在博客目录下的public\js中能找到这两个文件。<br><img src="https://img-blog.csdnimg.cn/img_convert/404cd408d06657edc4398950068854df.png"></p>
 <p>在引入两个JS后只需要在md文档中这么写：</p>
-<pre><code> &lt;div class="videosamplex"&gt;  
- &lt;video id="videoplayer"  
-  src="插入的视频地址"&gt;&lt;/video&gt;  
-&lt;/div&gt;  
-&lt;script&gt; 
-    gotoplayer("插入的视频地址");
-&lt;/script&gt;
+<pre><code>   &lt;div class="videosamplex"&gt;  
+    &lt;video id="videoplayer"  
+     src="插入的视频地址"&gt;&lt;/video&gt;  
+   &lt;/div&gt;  
+   &lt;script&gt; 
+       gotoplayer("插入的视频地址");
+   &lt;/script&gt;
 </code></pre>
 <p>就可以播放视频了</p>
-<h1 id="好处有啥？"><a href="#好处有啥？" class="headerlink" title="好处有啥？"></a>好处有啥？</h1><p>1.只要引入JS，你可以在任何支持Markdown语法的博客中这么写</p>
-<p>2.比使用<video>标签兼容性更好</video></p>
-<p>3.比使用Hexo插件可移植性更好</p>
-<p>4.兼容主流视频格式，建议使用MP4</p>
+<h1 id="好处有啥？"><a href="#好处有啥？" class="headerlink" title="好处有啥？"></a>好处有啥？</h1><pre><code>&gt; 1.只要引入JS，你可以在任何支持Markdown语法的博客中这么写
+&gt; 2.比使用&lt;video&gt;标签兼容性更好
+&gt; 3.比使用Hexo插件可移植性更好
+&gt; 4.兼容主流视频格式，建议使用MP4
+</code></pre>
 <p>Hexo静态博客视频播放<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35934658/article/details/114303142" title="Hexo静态博客视频播放">https://blog.csdn.net/qq_35934658/article/details/114303142</a></p>
 
                 
@@ -1395,7 +1397,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">2.1k</span>
+                        class="white-color">2.2k</span>
             
             
             
