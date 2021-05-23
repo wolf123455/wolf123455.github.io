@@ -489,7 +489,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    827
+                    780
                 </div>
                 
 
@@ -534,20 +534,46 @@
 </blockquote>
 <p>** 但是MarkDown没有被标准化，其版本较多。**</p>
 <p>除了一些通用的标记如标题，样式，列表等，每个平台都有自己特殊的标记<br>比如Hexo通过hexo-tag-dplayer插件来实现播放视频：<br>GitHub：<a target="_blank" rel="noopener" href="https://github.com/MoePlayer/hexo-tag-dplayer" title="https://github.com/MoePlayer/hexo-tag-dplayer">https://github.com/MoePlayer/hexo-tag-dplayer</a><br>安装插件npm install hexo-tag-dplayer –save后<br>使用如下代码调用：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">{% dplayer "url=https://moeplayer.b0.upaiyun.com/dplayer/hikarunara.mp4" "addition=https://dplayer.daoapp.io/bilibili?aid=4157142" "api=https://api.prprpr.me/dplayer/" "pic=https://moeplayer.b0.upaiyun.com/dplayer/hikarunara.jpg" "id=9E2E3368B56CDBB4" "loop=yes" "theme=#FADFA3" "autoplay=false" "token=tokendemo" %}</span><br><span class="line">```   </span><br><span class="line">这种方式虽然使用方便，但这样可移植性就非常差了，如果要把博客转移到其他平台非常不方便。</span><br><span class="line"></span><br><span class="line">## 那么有没有其他办法呢？</span><br><span class="line">我们知道.md文件是通过渲染生成HTML文件后再放上网页的，也就是说直接在md文件中写的HTML可以原样放上网页</span><br><span class="line"></span><br><span class="line">怎么做呢？</span><br><span class="line"></span><br><span class="line">## 使用准备</span><br><span class="line">我们需要ckplayer网页播放器的ckplayer.js和我写的gotoplayer.js</span><br><span class="line"></span><br><span class="line">ckplayer.js下载地址：</span><br><span class="line"></span><br><span class="line">- 官网：[http://www.ckplayer.com/](http://www.ckplayer.com/ "http://www.ckplayer.com/")</span><br><span class="line"></span><br><span class="line">- [我的CDN加速地址](https://web-1253780623.file.myqcloud.com/zhf-blog/js/ckplayer.js "我的CDN加速地址")</span><br><span class="line"></span><br><span class="line">gotoplayer.js下载地址：</span><br><span class="line"></span><br><span class="line">- [我的CDN加速地址](https://web-1253780623.cos.ap-shanghai.myqcloud.com/zhf-blog/js/gotoplayer.js "我的CDN加速地址")</span><br><span class="line"></span><br><span class="line">使用方法</span><br><span class="line">首先调用两个JS</span><br><span class="line">```	    </span><br><span class="line">	&lt;script type="text/javascript" src="/js/ckplayer.js"&gt;&lt;/script&gt;  </span><br><span class="line">	&lt;div class="videosamplex"&gt;</span><br><span class="line">	&lt;script type="text/javascript" src="/js/ 			gotoplayer.js"&gt; &lt;/script&gt;</span><br></pre></td></tr></tbody></table></figure>
+<pre><code>{% dplayer "url=https://moeplayer.b0.upaiyun.com/dplayer/hikarunara.mp4" "addition=https://dplayer.daoapp.io/bilibili?aid=4157142" "api=https://api.prprpr.me/dplayer/" "pic=https://moeplayer.b0.upaiyun.com/dplayer/hikarunara.jpg" "id=9E2E3368B56CDBB4" "loop=yes" "theme=#FADFA3" "autoplay=false" "token=tokendemo" %}
+</code></pre>
+<p>这种方式虽然使用方便，但这样可移植性就非常差了，如果要把博客转移到其他平台非常不方便。</p>
+<h2 id="那么有没有其他办法呢？"><a href="#那么有没有其他办法呢？" class="headerlink" title="那么有没有其他办法呢？"></a>那么有没有其他办法呢？</h2><p>我们知道.md文件是通过渲染生成HTML文件后再放上网页的，也就是说直接在md文件中写的HTML可以原样放上网页</p>
+<p>怎么做呢？</p>
+<h2 id="使用准备"><a href="#使用准备" class="headerlink" title="使用准备"></a>使用准备</h2><p>我们需要ckplayer网页播放器的ckplayer.js和我写的gotoplayer.js</p>
+<p>ckplayer.js下载地址：</p>
+<ul>
+<li><p>官网：<a target="_blank" rel="noopener" href="http://www.ckplayer.com/" title="http://www.ckplayer.com/">http://www.ckplayer.com/</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://web-1253780623.file.myqcloud.com/zhf-blog/js/ckplayer.js" title="我的CDN加速地址">我的CDN加速地址</a></p>
+</li>
+</ul>
+<p>gotoplayer.js下载地址：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://web-1253780623.cos.ap-shanghai.myqcloud.com/zhf-blog/js/gotoplayer.js" title="我的CDN加速地址">我的CDN加速地址</a></li>
+</ul>
+<p>使用方法<br>首先调用两个JS</p>
+<pre><code>&lt;script type="text/javascript" src="/js/
+ckplayer.js"&gt;&lt;/script&gt;  
+&lt;div class="videosamplex"&gt;
+&lt;script type="text/javascript" src="/js/ gotoplayer.js"&gt; &lt;/script&gt;
+</code></pre>
 <p>或使用我的CDN调用两个JS</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type="text/javascript" src="https://web-1253780623.cos.ap-shanghai.myqcloud.com/zhf-blog/js/ckplayer.js"&gt;&lt;/script&gt;  </span><br><span class="line">&lt;div class="videosamplex"&gt;</span><br><span class="line">&lt;script type="text/javascript" src="https://web-1253780623.cos.ap-shanghai.myqcloud.com/zhf-blog/js/gotoplayer.js"&gt; &lt;/script&gt;</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
-
+<pre><code>&lt;script type="text/javascript" src="https://web-1253780623.cos.ap-shanghai.myqcloud.com/zhf-blog/js/ckplayer.js"&gt;&lt;/script&gt;  
+&lt;div class="videosamplex"&gt;
+&lt;script type="text/javascript" src="https://web-1253780623.cos.ap-shanghai.myqcloud.com/zhf-blog/js/gotoplayer.js"&gt; &lt;/script&gt;
+</code></pre>
 <p>** 注意：如果你不打算用我的CDN，那么请把两个文件放在博客目录下的source\js文件夹中 **<br><img src="https://img-blog.csdnimg.cn/img_convert/2573f9b7216fec1e2f8d067d69108b62.png"></p>
 <p>并且确保在执行hexo g 后在博客目录下的public\js中能找到这两个文件。<br><img src="https://img-blog.csdnimg.cn/img_convert/404cd408d06657edc4398950068854df.png"></p>
 <p>在引入两个JS后只需要在md文档中这么写：</p>
-<pre><code>   &lt;div class="videosamplex"&gt;  
-    &lt;video id="videoplayer"  
-     src="插入的视频地址"&gt;&lt;/video&gt;  
-   &lt;/div&gt;  
-   &lt;script&gt; 
-       gotoplayer("插入的视频地址");
-   &lt;/script&gt;
+<pre><code>&lt;div class="videosamplex"&gt;  
+ &lt;video id="videoplayer"  
+  src="插入的视频地址"&gt;&lt;/video&gt;  
+&lt;/div&gt;  
+&lt;script&gt; 
+    gotoplayer("插入的视频地址");
+&lt;/script&gt;
+
+ 
 </code></pre>
 <p>就可以播放视频了</p>
 <h1 id="好处有啥？"><a href="#好处有啥？" class="headerlink" title="好处有啥？"></a>好处有啥？</h1><pre><code>&gt; 1.只要引入JS，你可以在任何支持Markdown语法的博客中这么写
@@ -1387,7 +1413,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">2.3k</span>
+                        class="white-color">2.2k</span>
             
             
             
