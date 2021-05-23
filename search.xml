@@ -4,19 +4,6 @@
   
     
     <entry>
-      <title>Hexo静态博客视频播放</title>
-      <link href="posts/10212.html"/>
-      <url>posts/10212.html</url>
-      
-        <content type="html"><![CDATA[<div class="videosamplex"><script type="text/javascript" src="https://web-1253780623.cos.ap-shanghai.myqcloud.com/zhf-blog/js/gotoplayer.js"> </script></div>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>hexo matery主题博客解析bug问题及主题优化</title>
       <link href="posts/19861.html"/>
       <url>posts/19861.html</url>
