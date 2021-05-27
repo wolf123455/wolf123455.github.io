@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="hexo的永久链接之abbrlink, huazai,github">
+    <meta name="keywords" content="hexo 中插入视频音频的方法, huazai,github">
     <meta name="description" content="Welcome to xiaoyaoke&#39;blog">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>hexo的永久链接之abbrlink | xiaoyaoke&#39;s blog</title>
+    <title>hexo 中插入视频音频的方法 | xiaoyaoke&#39;s blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -329,12 +329,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">hexo的永久链接之abbrlink</h1>
+                    <h1 class="description center-align post-title">hexo 中插入视频音频的方法</h1>
                 </div>
             </div>
         </div>
@@ -450,8 +450,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/hexo/">
-                                <span class="chip bg-color">hexo</span>
+                            <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                                <span class="chip bg-color">笔记</span>
                             </a>
                         
                     </div>
@@ -480,7 +480,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    147
+                    349
                 </div>
                 
 
@@ -507,15 +507,45 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
-<p>hexo的默认永久链接是在_config.yml里的配置permalink: :year/:month/:day/:title/。这种默认配置有个很不能接受的缺点，文件名为中文，会导致url链接里面出现中文。这次我来介绍一个比较方便好用的解决方案<code>hexo-abbrlink</code>插件。</p>
-</blockquote>
-<h2 id="安装hexo-abbrlink插件"><a href="#安装hexo-abbrlink插件" class="headerlink" title="安装hexo-abbrlink插件"></a>安装hexo-abbrlink插件</h2><p><code>npm install hexo-abbrlink --save</code></p>
-<p>站点配置文件(_config.yml)里:</p>
-<figure class="highlight dts"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre class=" language-hljs dts"><span class="hljs-symbol">permalink:</span> post/:abbrlink.html<br><span class="hljs-symbol">abbrlink:</span><br><span class="hljs-symbol">  alg:</span> crc32  <span class="hljs-meta"># 算法：crc16(default) and crc32</span><br><span class="hljs-symbol">  rep:</span> hex<span class="hljs-meta"><code class="language-hljs dts"><span class="hljs-symbol">permalink:</span> post/:abbrlink.html<br><span class="hljs-symbol">abbrlink:</span><br><span class="hljs-symbol">  alg:</span> crc32  <span class="hljs-meta"># 算法：crc16(default) and crc32</span><br><span class="hljs-symbol">  rep:</span> hex<span class="hljs-meta"># 进制：dec(default) and hex</span><br></code></pre></td></tr></tbody></table></figure>
+                <p>都使用iframe标签。音乐或视频下的分享 -&gt; 复制 iframe 通用代码 -&gt; 粘贴进来，这样就可以了。</p>
+<p>// 其中，width=”100%” height=”580”。 &lt;- 这种效果不好，请参看下方官方示例代码效果。</p>
+<h4 id="插入网易云音乐"><a href="#插入网易云音乐" class="headerlink" title="插入网易云音乐"></a>插入网易云音乐</h4><p><code>1.
+2.<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&amp;id=167655&amp;auto=1&amp;height=66"></iframe>
+3.</code></p>
 
-<p>使用hexo g 会自动在你的文章中加上abbrlink: fbf5310d</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&amp;id=29567191&amp;auto=1&amp;height=66"></iframe>
 
+
+<h4 id="插入-bilibili-视频"><a href="#插入-bilibili-视频" class="headerlink" title="插入 bilibili 视频"></a>插入 bilibili 视频</h4><figure class="highlight plaintext"><figcaption><span><iframe src<="" span=""></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre class=" language-hljs 1."><code class="language-hljs 1.">```<br><br>▲ 这样直接插入的代码手机端不能自适应，效果不完美。<br>```1 <div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe <br>2 src="//player.bilibili.com/player.html?aid=39807850&cid=69927212&page=1" scrolling="no" border="0" <br>3.frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; <br>4.height: 100%; left: 0; top: 0;"> </iframe></div><br></code></pre></td></tr></table></figure>
+
+<p>▲ <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/" title="官方网站中">官方网站中</a>这里有插入一个 bilibili 视频，通过右键 -&gt; 查看源码，将格式代码抄过来；自己替换掉 src 路径就可以了。</p>
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe 
+src="//player.bilibili.com/player.html?aid=39807850&cid=69927212&page=1" scrolling="no" border="0" 
+frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; 
+height: 100%; left: 0; top: 0;"> </iframe>
+
+<h4 id="插入腾讯视频"><a href="#插入腾讯视频" class="headerlink" title="插入腾讯视频"></a>插入腾讯视频</h4><figure class="highlight xml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre class=" language-hljs xml">1 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"position: relative; width: 100%; height: 0; padding-bottom: 75%;"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">iframe</span> </span><br><span class="hljs-tag"><span class="hljs-attr">2</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://v.qq.com/txp/iframe/player.html?vid=t0028bp4lsn"</span> <span class="hljs-attr">scrolling</span>=<span class="hljs-string">"no"</span> <span class="hljs-attr">border</span>=<span class="hljs-string">"0"</span> </span><br><span class="hljs-tag"><span class="hljs-attr">3</span> <span class="hljs-attr">frameborder</span>=<span class="hljs-string">"no"</span> <span class="hljs-attr">framespacing</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">allowfullscreen</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"position: absolute; width: 100%; </span></span><br><span class="hljs-string"><span class="hljs-tag">4 height: 100%; left: 0; top: 0;"</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-name">iframe</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name"><code class="language-hljs xml">1 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"position: relative; width: 100%; height: 0; padding-bottom: 75%;"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">iframe</span> </span><br><span class="hljs-tag"><span class="hljs-attr">2</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://v.qq.com/txp/iframe/player.html?vid=t0028bp4lsn"</span> <span class="hljs-attr">scrolling</span>=<span class="hljs-string">"no"</span> <span class="hljs-attr">border</span>=<span class="hljs-string">"0"</span> </span><br><span class="hljs-tag"><span class="hljs-attr">3</span> <span class="hljs-attr">frameborder</span>=<span class="hljs-string">"no"</span> <span class="hljs-attr">framespacing</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">allowfullscreen</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"position: absolute; width: 100%; </span></span><br><span class="hljs-string"><span class="hljs-tag">4 height: 100%; left: 0; top: 0;"</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-name">iframe</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>></span><br></code></pre></td></tr></tbody></table></figure>
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="https://v.qq.com/txp/iframe/player.html?vid=t0028bp4lsn" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; 
+height: 100%; left: 0; top: 0;"> </iframe></div>
+####  插入youku视频
+<figure class="highlight xml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre class=" language-hljs xml">1 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"position: relative; width: 100%; height: 0; padding-bottom: 75%;"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">iframe</span> </span><br><span class="hljs-tag"><span class="hljs-attr">2</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"//player.youku.com/embed/XMzc5ODM0NDE2MA=="</span> <span class="hljs-attr">scrolling</span>=<span class="hljs-string">"no"</span> <span class="hljs-attr">border</span>=<span class="hljs-string">"0"</span> </span><br><span class="hljs-tag"><span class="hljs-attr">3</span> <span class="hljs-attr">frameborder</span>=<span class="hljs-string">"no"</span> <span class="hljs-attr">framespacing</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">allowfullscreen</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"position: absolute; width: 100%; </span></span><br><span class="hljs-string"><span class="hljs-tag">4 height: 100%; left: 0; top: 0;"</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-name">iframe</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name"><code class="language-hljs xml">1 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"position: relative; width: 100%; height: 0; padding-bottom: 75%;"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">iframe</span> </span><br><span class="hljs-tag"><span class="hljs-attr">2</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"//player.youku.com/embed/XMzc5ODM0NDE2MA=="</span> <span class="hljs-attr">scrolling</span>=<span class="hljs-string">"no"</span> <span class="hljs-attr">border</span>=<span class="hljs-string">"0"</span> </span><br><span class="hljs-tag"><span class="hljs-attr">3</span> <span class="hljs-attr">frameborder</span>=<span class="hljs-string">"no"</span> <span class="hljs-attr">framespacing</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">allowfullscreen</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"position: absolute; width: 100%; </span></span><br><span class="hljs-string"><span class="hljs-tag">4 height: 100%; left: 0; top: 0;"</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-name">iframe</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>></span><br></code></pre></td></tr></tbody></table></figure>
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="//player.youku.com/embed/XMzc5ODM0NDE2MA==" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; 
+height: 100%; left: 0; top: 0;"> </iframe></div>
+#### 插入微博秒拍视频
+
+<p>通过这里发现了一个视频原地址解析的<a target="_blank" rel="noopener" href="https://weibomiaopai.com/" title="网站">网站</a>，把秒拍的真实地址提取出来。 // 这个方法好像不行，可以用来下载。如果微博中插入的视频是秒拍的，可以右键提取到秒拍地址。如果是直接从微博上传的好像没有固定地址。</p>
+<p>下面这个是有秒拍地址的视频：</p>
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="https://sjycdn.miaopai.com/stream/aeCwDT7wiR8pkAPhqZ~h6ruDS0-aecper4CHqQ___32.mp4?ssig=0cb9694130daa699017e59e6dbf920cd&amp;time_stamp=1622088579713" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; 
+height: 100%; left: 0; top: 0;"> </iframe></div>
+
+
+<h4 id="hexo-关于"><a href="#hexo-关于" class="headerlink" title="hexo 关于"></a>hexo 关于
+
+一些内容不想被主题渲染，可以使用该标签呈现原始状态。可查看[官网标签](https://hexo.io/zh-cn/docs/tag-plugins "官网标签")插件说明。
+
+    1 {% raw %}
+    2 content
+    3 {% endraw %}</h4></span></figcaption></figure>
                 
             </div>
             <hr/>
@@ -541,7 +571,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://wolf123455.github.io/posts/26887.html">https://wolf123455.github.io/posts/26887.html</a>
+                    <a href="https://wolf123455.github.io/posts/17748.html">https://wolf123455.github.io/posts/17748.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -579,8 +609,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/hexo/">
-                                    <span class="chip bg-color">hexo</span>
+                                <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                                    <span class="chip bg-color">笔记</span>
                                 </a>
                             
                         </div>
@@ -1018,9 +1048,56 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
+            <div class="card">
+                <a href="/posts/17748.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="hexo 中插入视频音频的方法">
+                        
+                        <span class="card-title">hexo 中插入视频音频的方法</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-27
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            yanjianhua
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">笔记</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/posts/7408.html">
                     <div class="card-image">
@@ -1038,9 +1115,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-27
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-27
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1058,51 +1135,6 @@
                     
                     <a href="/tags/%E6%95%99%E7%A8%8B/">
                         <span class="chip bg-color">教程</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/posts/36229.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="音乐播放器插入之一">
-                        
-                        <span class="card-title">音乐播放器插入之一</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-26
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            yanjianhua
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E6%92%AD%E6%94%BE%E5%99%A8/">
-                        <span class="chip bg-color">播放器</span>
                     </a>
                     
                 </div>
