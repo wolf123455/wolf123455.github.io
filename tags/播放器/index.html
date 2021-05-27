@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Tags, huazai,github">
+    <meta name="keywords" content="Tag: 播放器, huazai,github">
     <meta name="description" content="Welcome to xiaoyaoke&#39;blog">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Tags | xiaoyaoke&#39;s blog</title>
+    <title>Tag: 播放器 | xiaoyaoke&#39;s blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -358,9 +358,63 @@
 
     </div>
 </div>
+<style type="text/css">
+    #category-radar {
+        width: 100%;
+        height: 360px;
+    }
+</style>
+
+<div class="container" data-aos="fade-up">
+    <div class="card">
+        <div id="category-radar" class="card-content"></div>
+    </div>
+</div>
+<script type="text/javascript" src="/js/echarts.min.js"></script>
+
+<script type="text/javascript">
+    let radarChart = echarts.init(document.getElementById('category-radar'));
+
+    
+
+    let option = {
+        title: {
+            left: 'center',
+            text: 'Post Categories Radar Chart',
+            textStyle: {
+                fontWeight: 500,
+                fontSize: 22
+            }
+        },
+        tooltip: {},
+        radar: {
+            name: {
+                textStyle: {
+                    color: '#3C4858'
+                }
+            },
+            indicator: [{"name":"视频","max":2}],
+            nameGap: 5,
+            center: ['50%','55%'],
+            radius: '66%'
+        },
+        series: [{
+            type: 'radar',
+            color: ['#3ecf8e'],
+            itemStyle: {normal: {areaStyle: {type: 'default'}}},
+            data : [
+                {
+                    value : [1],
+                    name : 'Number of Categories'
+                }
+            ]
+        }]
+    };
+
+    radarChart.setOption(option);
+</script>
 
 <main class="content">
-
     
 
 <div id="tags" class="container chip-container">
@@ -392,7 +446,7 @@
                 
                 <a href="/tags/%E6%92%AD%E6%94%BE%E5%99%A8/" title="播放器: 1">
                     <span class="chip center-align waves-effect waves-light
-                             chip-default "
+                             chip-active "
                             data-tagname="播放器" style="background-color: #D5F5E3;">播放器
                         <span class="tag-length">1</span>
                     </span>
@@ -404,32 +458,43 @@
 </div>
 
     
-    <link rel="stylesheet" type="text/css" href="/libs/jqcloud/jqcloud.css">
-<style type="text/css">
-    #tag-wordcloud {
-        width: 100%;
-        height: 300px;
-    }
-</style>
 
-<div class="container" data-aos="fade-up">
-    <div class="card">
-        <div id="tag-wordcloud" class="card-content"></div>
-    </div>
-</div>
-
-<script type="text/javascript" src="/libs/jqcloud/jqcloud-1.0.4.min.js"></script>
-<script type="text/javascript">
-    
-
-    $('#tag-wordcloud').jQCloud([{"text":"笔记","weight":2,"link":"/tags/笔记/"},{"text":"教程","weight":2,"link":"/tags/教程/"},{"text":"播放器","weight":1,"link":"/tags/播放器/"}], {
-        autoResize: true
-    });
-</script>
-
-    
-
+    <article id="articles" class="container articles">
+        <div class="row tags-posts">
+            
+            
+            <div class="article tag-post col s12 m6 l4" data-tags="播放器" data-aos="fade-up">
+                <div class="card">
+                    <a href="/posts/36229.html">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="音乐播放器插入之一">
+                            
+                            <span class="card-title">音乐播放器插入之一</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-26
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                yanjianhua
+                                
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </article>
 </main>
+
+
 
 
     <footer class="page-footer bg-color">

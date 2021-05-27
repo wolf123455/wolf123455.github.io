@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>音乐播放器插入之一</title>
+      <link href="posts/36229.html"/>
+      <url>posts/36229.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="美国Billboard榜"><a href="#美国Billboard榜" class="headerlink" title="美国Billboard榜"></a>美国Billboard榜</h2><meta charset="utf-8"><title></title>    <!-- require APlayer --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><!-- require MetingJS --><script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script><meting-js server="netease" type="playlist" id="60198"></meting-js>##  四大名著<meta charset="utf-8"><title></title>    <!-- require APlayer --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><!-- require MetingJS --><script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script><meting-js server="netease" type="playlist" id="635991067"></meting-js>##  康熙王朝<meta charset="utf-8"><title></title>    <!-- require APlayer --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><!-- require MetingJS --><script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script><meting-js server="netease" type="playlist" id="3188905736"></meting-js>##  红楼梦<meta charset="utf-8"><title></title>    <!-- require APlayer --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><!-- require MetingJS --><script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script><meting-js server="netease" type="playlist" id="973443668"></meting-js>##  白眉大侠<meta charset="utf-8"><title></title>    <!-- require APlayer --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><!-- require MetingJS --><script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script><meting-js server="netease" type="playlist" id="82355562"></meting-js>##  封神棒<meta charset="utf-8"><title></title>    <!-- require APlayer --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><!-- require MetingJS --><script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script><meting-js server="netease" type="playlist" id="33050484"></meting-js>##  水浒传<meta charset="utf-8"><title></title>    <!-- require APlayer --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><!-- require MetingJS --><script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script><meting-js server="netease" type="playlist" id="441645601"></meting-js>##  周杰伦歌曲集<meta charset="utf-8"><title></title>    <!-- require APlayer --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><!-- require MetingJS --><script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script><meting-js server="netease" type="playlist" id="11860849"></meting-js><p><a href="https://www.cnblogs.com/fby698/p/12663089.html#scroller-1" title="Aplayer搭配Metingjs音乐插件的使用">Aplayer搭配Metingjs音乐插件的使用</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 播放器 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>HEXO主题美化 | 给你的博客加上GITHUB日历云和分类雷达图</title>
       <link href="posts/44016.html"/>
       <url>posts/44016.html</url>
